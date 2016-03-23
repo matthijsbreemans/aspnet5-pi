@@ -1,0 +1,5 @@
+dnu publish --out "c:\temp\" --no-source --runtime dnx-coreclr-win-arm.1.0.0-rc2-20221
+net start winrm
+Set-Item WSMan:\localhost\Client\TrustedHosts –Value 192.168.1.166
+
+Enter-PSSession -ComputerName 192.168.1.166 -Credential Administrator
